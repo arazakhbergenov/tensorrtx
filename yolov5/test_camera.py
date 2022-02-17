@@ -67,7 +67,7 @@ def detect_people(login, password, host, mini, engine_path, visualize=False, vid
 
             batch_frames, use_time = model.infer_frame(frame, categories)
 
-            print('Input from {}, time->{:.2f}ms'.format(video_source, use_time))
+            print('Input from {}, time->{:.2f}ms'.format(video_source, use_time * 1000))
             if visualize:
                 frame = cv2.resize(batch_frames[0], WINDOW_SHAPE)
                 cv2.imshow(f'Video_{video_file}', frame)
