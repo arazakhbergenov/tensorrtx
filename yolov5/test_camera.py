@@ -21,7 +21,7 @@ def define_working_directory():
         os.chdir(cwd + 'tensorrtx/yolov5')
 
 
-def detect_people(login, password, host, mini, engine_path, visualize=False, video_path=None):
+def detect_objects(login, password, host, mini, engine_path, visualize=False, video_path=None):
     # choosing a video source
     if video_path is not None:
         video_file = 'VideoFile'
@@ -147,4 +147,4 @@ if __name__ == '__main__':
             "hair drier", "toothbrush"]
 
     # transmit_live(login, password, host, mini)
-    detect_people(login, password, host, mini, engine_path, visualize=visualize, video_path=video_path)
+    detect_objects(login, password, host, mini, engine_path, visualize=visualize, video_path=video_path)
